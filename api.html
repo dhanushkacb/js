@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <input type="text" id="sort-age" placeholder="Age greater than">
+    <button onclick="sortByName()">Sort By Name</button>
+    <button onclick="reset()">Reset</button>
+    <div id="resultID"></div>
+
+    <h3>Add</h3>
+    <form method="POST" onsubmit="addItem()">
+        <input type="text" id="name" placeholder="Name" onclick="sortByName()">
+        <input type="text" id="age" placeholder="Age">
+        <input type="submit" value="Add">
+    </form>
+    <h3>Edit</h3>
+    <form method="PUT" onsubmit="editItem()">
+        <input type="text" id="edit-id" placeholder="Id">
+        <input type="text" id="edit-name" placeholder="Name">
+        <input type="text" id="edit-age" placeholder="Age">
+        <input type="submit" value="Edit">
+    </form>
+    <h3>Delete</h3>
+    <form method="DELETE" onsubmit="deleteItem()">
+        <input type="text" id="delete-id" placeholder="Id">
+        <input type="submit" value="Delete">
+    </form>
+    
+
+    
+    <script src="api.js" asp-append-version="true"></script>
+</body>
+</html>

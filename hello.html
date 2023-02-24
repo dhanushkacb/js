@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Test</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            function hello(){
+                const heading = document.querySelector('h1');
+                if(heading.innerHTML === 'Hello'){
+                    heading.innerHTML='GoodBye!';
+                } else{
+                    heading.innerHTML='Hello';
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').onsubmit = function() {
+                  const name = document.querySelector('#name').value;
+                  alert(`Hello ${name}`);
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="hello" class="green">Hello, World!</h1>
+        <button onclick="hello()">Click Here</button>
+        <p>Test message 0</p>
+        <div>
+            <p>Test message 1</p>
+            <div>
+                <p class="orange">Test message 2</p>
+                <div>
+                    <p>Test message 3</p>
+                </div>
+            </div>
+        </div>
+
+        <form>
+            <input autofocus id="name" placeholder="Name" type="text">
+            <input type="submit">
+        </form>
+    </body>
+</html>

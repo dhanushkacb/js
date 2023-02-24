@@ -1,0 +1,32 @@
+h1{
+    color: blue;    
+}
+
+#hello{
+    color: green;
+}
+
+.green, .orange {
+    color: greenyellow;
+}
+
+
+p, div > p {
+    color: blueviolet;
+}
+
+div > div > p {
+    color: blue;
+}
+
+div > div > div > p{
+    color: darkslateblue;
+}
+
+div > div > div > div > p{
+    color: greenyellow;
+}
+
+p:first-child{
+    background-color: yellow;
+}
